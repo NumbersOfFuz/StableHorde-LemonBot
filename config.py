@@ -198,7 +198,7 @@ apidocs = requests.get('https://stablehorde.net/api/swagger.json').json()
 sampler_list = apidocs['definitions']['ModelPayloadRootStable']['properties']['sampler_name']['enum']
 processor_list = apidocs['definitions']['ModelPayloadRootStable']['properties']['post_processing']['items']['enum']
 
-def get_top_models(data, num_models=25):
+def get_top_models(data, num_models=120):
     # Sort the data by count value
     sorted_data = sorted(data, key=lambda x: x['count'], reverse=True)
     
